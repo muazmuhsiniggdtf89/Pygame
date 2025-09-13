@@ -33,13 +33,13 @@ def main():
         if pressed[pygame.K_UP]: y -= 3
         if pressed[pygame.K_DOWN]: y += 3
 
-        x = min (max(0, x), screen_width - screen_height)
-        y = min (max(0, y), screen_height- screen_width)
+        x = min (max(0, x), screen_width - sprite_height)
+        y = min (max(0, y), screen_height- sprite_width)
 
         if x == 0: current_color = colors['blue']
         elif x == screen_width - sprite_width: current_color = colors['yellow']
         elif y == 0: current_color = colors['red']
-        elif y == screen_width - sprite_width: current_color = colors['green']
+        elif y == screen_height - sprite_height: current_color = colors['green']
 
         else:
             current_color = colors['white']
